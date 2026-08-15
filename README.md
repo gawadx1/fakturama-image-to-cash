@@ -186,12 +186,17 @@ pytest
 
 ## If I Had 3 More Hours
 
-1. **Stronger OCR** – add deskewing, language detection, and confidence scoring to choose the best OCR variant automatically.
-2. **Selector hardening** – capture real UIA trees from multiple Fakturama versions and centralize selector maps with fallbacks.
-3. **Recovery flows** – retry transient UI failures, restore focus to the open Order after master-data dialogs, and add checkpoint resume.
-4. **Better verification** – open saved documents and read field values directly instead of relying only on list rows.
-5. **Integration tests** – recorded UI smoke tests behind a `FAKTURAMA_INTEGRATION=1` flag.
-6. **Reporting** – HTML run report with OCR text, extracted JSON, screenshots, and stage timings.
+1. **Stronger OCR** – Add deskewing, language detection, and OCR confidence scoring to improve extraction reliability and automatically select the best OCR result.
+
+2. **Selector hardening** – Capture and validate UIA trees across multiple Fakturama environments, then centralize selectors with fallbacks to improve compatibility and resilience to UI variations.
+
+3. **Recovery flows** – Add retries for transient UI failures, restore focus to the open Order after master-data dialogs, and introduce checkpoints so interrupted runs can resume safely.
+
+4. **Better verification** – Reopen saved Orders and Invoices and read their persisted field values directly, rather than relying primarily on document-list rows.
+
+5. **Integration tests** – Add recorded end-to-end UI smoke tests behind a `FAKTURAMA_INTEGRATION=1` flag to validate the real Fakturama workflow without affecting normal unit-test execution.
+
+6. **Reporting** – Add an HTML execution report containing OCR output, extracted structured data, screenshots, stage timings, and verification results for easier debugging and auditability.
 
 ## License
 
