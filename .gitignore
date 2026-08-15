@@ -1,0 +1,17 @@
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.log
+.venv/
+venv/
+screenshots/*.png
+!screenshots/.gitkeep
+input/*
+!input/.gitkeep
+*.egg-info/
+dist/
+build/
+.idea/
+.vscode/
